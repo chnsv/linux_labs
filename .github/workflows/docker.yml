@@ -44,13 +44,13 @@ jobs:
       - name: Build app image
         run: |
           docker build \
-          -t ${{ secrets.DOCKER_USER }}/kubsu_docker:build-${{ github.sha }} \
-          -t ${{ secrets.DOCKER_USER }}/kubsu_docker:latest \
+          -t ${{ secrets.DOCKER_USER }}/linuxhomework:build-${{ github.sha }} \
+          -t ${{ secrets.DOCKER_USER }}/linuxhomework:latest \
           -f docker/Dockerfile \
           docker/
 
           echo "Docker image built successfully"
-          docker images | grep ${{ secrets.DOCKER_USER }}/kubsu_docker
+          docker images | grep ${{ secrets.DOCKER_USER }}/linuxhomework
 
       - name: Run tests
         run: |
