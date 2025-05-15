@@ -5,7 +5,7 @@ set -e
 CONTAINER_NAME="kubsu_runner"
 
 echo "Pulling latest image..."
-podman pull chernyshovanika/linuxhomework:latest
+podman pull docker.io/chernyshovanika/linuxhomework:latest
 
 if podman container exists "$CONTAINER_NAME"; then
     echo "Removing existing container..."

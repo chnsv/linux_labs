@@ -26,6 +26,6 @@ ENV PYTHONPATH=/app
 
 USER fastapiuser
 
-EXPOSE 8031
+EXPOSE 8039
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8031"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8039"]
